@@ -22,16 +22,21 @@ int lenght = N13.Length;
 if (lenght<3)
 Console.WriteLine("Третьей цифры нет");
 else
-Console.WriteLine(N13.Substring(2,1));
+Console.WriteLine($"Третья цифра {N13.Substring(2,1)}");
 }
 
 Task15();
 void Task15 ()
 {
-Console.WriteLine("Введите цифру для задачи 15:");
+Console.WriteLine("Введите номер дня недели для задачи 15:");
 int day = int.Parse(Console.ReadLine());
 if ((day==6)||(day==7))
 Console.WriteLine("Выходной");
 else
-Console.Write("Не выходной");
+{
+    if ((day>1)&&(day<6))
+    Console.Write("Не выходной");
+    else
+     Console.Write("Некорректный номер");
+}
 }
